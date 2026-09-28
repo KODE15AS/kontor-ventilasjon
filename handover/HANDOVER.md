@@ -21,7 +21,8 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 
 ### nilan (hovedanlegg)
 
-- [ ] NILAN-modell og styringsenhet identifisert (dokumentasjon fra Jørn)
+- [x] NILAN-modell og styringsenhet identifisert: VPR 560 med CTS 602i
+      (Modbus RTU) — se `nilan/README.md` og `nilan/dok/`
 - [ ] Fysisk Modbus-forbindelse raven ↔ NILAN etablert
 - [ ] Operatørstøtte for brukere
 - [ ] Agentstyring over Modbus med trygge grenser
@@ -50,5 +51,7 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
   container; splitting i flere repoer vurderes i hver handover.
 - **Sikkerhetsstrategi for agent-skriving** til fysisk anlegg (trygt bånd
   vs. norm «bestilling»): Jørn har strategier på gang — kommer.
-- **NILAN-dokumentasjon:** lastes opp av Jørn.
+- **9 eller 10 soner?** Jørn sier 10 undersystemer; display-brukeranvisningen
+  fra 2024 sier «snitt av retur fra hver av de 9 soner». Avklares med Jørn.
 - **Sonenavn:** navneliste tas senere.
+- **Modbus-registerkart for CTS602:** protokolldokument må skaffes fra Nilan.
