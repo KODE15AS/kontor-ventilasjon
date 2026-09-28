@@ -30,11 +30,22 @@
 Aktiv alarm har stoppet aggregatet, og/eller Drift står på «Slukket» —
 ukeprogrammet kan uansett ikke vekke det.
 
-## Neste steg (sjekkliste for Jørn ved panelet)
+## Avklaring (2026-09-28, se panelbilde 4 og 5 i `../dok/`)
 
-- [ ] Trykk på varseltrekanten: noter alarm-ID og navn (ta bilde)
-- [ ] Sjekk Innstillinger → Drift: står den på «Slukket»? Sett «Tændt» når
-      alarmen er avklart
-- [ ] Sjekk Dato/Tid på anlegget (feil klokke gir feil programtider)
-- [ ] Avklar om Funksjon 2 «De-aktiver kl. 12:00» er tilsiktet
-- [ ] Dokumenter alarmårsak her og lukk saken
+- **c03 Kritisk alarm — Brannalarm aktivert:** trolig utløst av at Jørn
+  åpnet et servicepanel dagen før. Kritisk alarm stopper aggregatet, og
+  ukeprogrammet kan ikke starte det igjen → dette var årsaken.
+- **i10 Informasjon — Overheting el-ettervarmer:** følge av at Jørn har
+  slått av hovedsikringen til el-ettervarmeren pga. unødvendig
+  energiforbruk.
+- Alarmene ble kvittert og **anlegget går igjen** per 2026-09-28 kl. 10.
+
+Merk: manualen s. 28 («Genstart») har en innstilling for selvkvittering av
+brannalarm (Service → Genstart → Brand) — relevant hvis servicepaneler
+åpnes jevnlig. Også tilgjengelig over Modbus (`Control.RestartMode`,
+holding-register 4040).
+
+## Gjenstående
+
+- [ ] Avklar om ukeprogrammets Funksjon 2 «De-aktiver kl. 12:00» er
+      tilsiktet (tas i egen sak senere, jf. Jørn 2026-09-28)
