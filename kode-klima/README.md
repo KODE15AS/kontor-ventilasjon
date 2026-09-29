@@ -9,4 +9,9 @@ hovedanlegget (nilan/).
 - Backend: Rust; Python der det er hensiktsmessig
 - Tilgang: 🔒 kun Tailscale / lokalt nett «Kode15»
 
-Status: ikke påbegynt — spesifiseres i `handover/HANDOVER.md`.
+Sonekartet `kontor-oversikt.svg` er mastertegningen for oversikten: SVG i
+KODE15-profil der hver sone har `id="gruppe-N"` for kobling mot status og
+styring i UI-et.
+
+Status: sonekart-utkast på plass; UI ellers ikke påbegynt — spesifiseres i
+`handover/HANDOVER.md`.

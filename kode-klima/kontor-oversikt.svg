@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 620" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif">
+  <!--
+    KODE15 kontoroversikt 1. etasje - sonekart for kontor-ventilasjon.
+    Tegnet etter KODE15-webprofilen (raven-platform/webprofil-kode15):
+    kun k15-tokens. Hver sone har id="gruppe-N" for kobling mot KODE-klima.
+    Kilde-skisse: dok/2026-09-29-kontor-layout-1etg.jpg
+    Nøkkel: dok/omrader-og-grupper.md
+  -->
+  <style>
+    .bygg      { fill: #FFFFFF; stroke: #DBDBDB; }
+    .felles    { fill: #F4F5F7; stroke: #DBDBDB; }
+    .teknisk   { fill: #BBAD9A; fill-opacity: 0.22; stroke: #BBAD9A; }
+    .utenfor   { fill: #F4F5F7; fill-opacity: 0.55; stroke: #DBDBDB; stroke-dasharray: 5 4; }
+    .navn      { fill: #525D65; font-size: 15px; font-weight: 500; }
+    .navn-s    { fill: #525D65; font-size: 12px; font-weight: 500; }
+    .gruppe    { fill: #959593; font-size: 10px; letter-spacing: 1.5px; font-weight: 500; }
+    .rom       { fill: #959593; font-size: 9px; letter-spacing: 0.5px; }
+    .romchip   { fill: #F7F4EF; stroke: #DBDBDB; }
+    .kicker    { fill: #959593; font-size: 11px; letter-spacing: 2px; font-weight: 500; }
+    .tittel    { fill: #525D65; font-size: 24px; font-weight: 400; }
+    .nilan     { fill: #BBAD9A; }
+    .nilantxt  { fill: #FFFFFF; font-size: 9px; letter-spacing: 1px; font-weight: 500; }
+  </style>
+
+  <!-- Topptekst -->
+  <text x="24" y="30" class="kicker">KODE15 · KONTOR-VENTILASJON</text>
+  <text x="24" y="60" class="tittel">Oversikt 1. etasje</text>
+
+  <!-- Trapperom (utenfor sonene) -->
+  <rect id="trapperom" x="24" y="90" width="120" height="90" rx="10" class="utenfor"/>
+  <text x="84" y="140" text-anchor="middle" class="navn-s">Trapperom</text>
+
+  <!-- Ventilasjon KODE15 (aggregatrommet, teknisk) -->
+  <g id="ventilasjon-kode15">
+    <rect x="380" y="90" width="190" height="90" rx="10" class="teknisk"/>
+    <text x="475" y="118" text-anchor="middle" class="navn-s">Ventilasjon KODE15</text>
+    <rect x="420" y="132" width="110" height="26" rx="6" class="nilan"/>
+    <text x="475" y="149" text-anchor="middle" class="nilantxt">NILAN VPR 560</text>
+  </g>
+
+  <!-- Foajé - gruppe 4 -->
+  <g id="gruppe-4">
+    <rect x="24" y="200" width="290" height="140" rx="12" class="felles"/>
+    <text x="40" y="226" class="gruppe">GRUPPE 4</text>
+    <text x="40" y="252" class="navn">Foajé</text>
+    <g class="rom">
+      <rect x="40" y="270" width="34" height="20" rx="5" class="romchip"/><text x="57" y="284" text-anchor="middle" class="rom">FK1</text>
+      <rect x="80" y="270" width="34" height="20" rx="5" class="romchip"/><text x="97" y="284" text-anchor="middle" class="rom">FK2</text>
+      <rect x="120" y="270" width="34" height="20" rx="5" class="romchip"/><text x="137" y="284" text-anchor="middle" class="rom">FK3</text>
+      <rect x="160" y="270" width="34" height="20" rx="5" class="romchip"/><text x="177" y="284" text-anchor="middle" class="rom">FK4</text>
+      <rect x="40" y="298" width="34" height="20" rx="5" class="romchip"/><text x="57" y="312" text-anchor="middle" class="rom">FT1</text>
+      <rect x="80" y="298" width="34" height="20" rx="5" class="romchip"/><text x="97" y="312" text-anchor="middle" class="rom">FT2</text>
+      <rect x="120" y="298" width="34" height="20" rx="5" class="romchip"/><text x="137" y="312" text-anchor="middle" class="rom">FT3</text>
+    </g>
+  </g>
+
+  <!-- Garderobe - gruppe 5 -->
+  <g id="gruppe-5">
+    <rect x="324" y="200" width="180" height="140" rx="12" class="felles"/>
+    <text x="340" y="226" class="gruppe">GRUPPE 5</text>
+    <text x="340" y="252" class="navn">Garderobe</text>
+    <text x="340" y="272" class="rom">med toaletter</text>
+  </g>
+
+  <!-- Biblioteket - gruppe 7 -->
+  <g id="gruppe-7a">
+    <rect x="514" y="200" width="160" height="140" rx="12" class="felles"/>
+    <text x="530" y="226" class="gruppe">GRUPPE 7</text>
+    <text x="530" y="252" class="navn">Biblioteket</text>
+  </g>
+
+  <!-- Kjøkken og BK - gruppe 7 -->
+  <g id="gruppe-7b">
+    <rect x="684" y="200" width="130" height="140" rx="12" class="felles"/>
+    <text x="700" y="226" class="gruppe">GRUPPE 7</text>
+    <text x="700" y="252" class="navn-s">Kjøkken og BK</text>
+  </g>
+
+  <!-- Toaletter - gruppe 8 -->
+  <g id="gruppe-8a">
+    <rect x="824" y="200" width="80" height="64" rx="10" class="felles"/>
+    <text x="836" y="222" class="gruppe">GR. 8</text>
+    <text x="836" y="242" class="navn-s">Toaletter</text>
+  </g>
+
+  <!-- Ventilasjon 1.etg (teknisk) -->
+  <g id="ventilasjon-1etg">
+    <rect x="914" y="200" width="102" height="64" rx="10" class="teknisk"/>
+    <text x="965" y="228" text-anchor="middle" class="navn-s">Ventilasjon</text>
+    <text x="965" y="244" text-anchor="middle" class="navn-s">1. etg</text>
+  </g>
+
+  <!-- Konferanserommet - gruppe 8 -->
+  <g id="gruppe-8b">
+    <rect x="824" y="274" width="192" height="86" rx="12" class="bygg"/>
+    <text x="840" y="298" class="gruppe">GRUPPE 8</text>
+    <text x="840" y="324" class="navn-s">Konferanserommet</text>
+  </g>
+
+  <!-- Klasserommet - gruppe 1 -->
+  <g id="gruppe-1">
+    <rect x="24" y="350" width="170" height="230" rx="12" class="bygg"/>
+    <text x="40" y="376" class="gruppe">GRUPPE 1</text>
+    <text x="40" y="402" class="navn">Klasserommet</text>
+  </g>
+
+  <!-- Midtkuben - gruppe 2 -->
+  <g id="gruppe-2">
+    <rect x="204" y="350" width="150" height="230" rx="12" class="bygg"/>
+    <text x="220" y="376" class="gruppe">GRUPPE 2</text>
+    <text x="220" y="402" class="navn">Midtkuben</text>
+  </g>
+
+  <!-- Trappekuben - gruppe 3 -->
+  <g id="gruppe-3">
+    <rect x="364" y="350" width="140" height="230" rx="12" class="bygg"/>
+    <text x="380" y="376" class="gruppe">GRUPPE 3</text>
+    <text x="380" y="402" class="navn">Trappekuben</text>
+    <g>
+      <rect x="380" y="420" width="34" height="20" rx="5" class="romchip"/><text x="397" y="434" text-anchor="middle" class="rom">TK1</text>
+      <rect x="420" y="420" width="34" height="20" rx="5" class="romchip"/><text x="437" y="434" text-anchor="middle" class="rom">TK2</text>
+      <rect x="380" y="448" width="34" height="20" rx="5" class="romchip"/><text x="397" y="462" text-anchor="middle" class="rom">TK3</text>
+      <rect x="420" y="448" width="34" height="20" rx="5" class="romchip"/><text x="437" y="462" text-anchor="middle" class="rom">TD1</text>
+      <rect x="380" y="476" width="34" height="20" rx="5" class="romchip"/><text x="397" y="490" text-anchor="middle" class="rom">TD2</text>
+    </g>
+  </g>
+
+  <!-- Møteområdet - gruppe 9a + 9b -->
+  <g id="gruppe-9">
+    <rect x="514" y="350" width="300" height="230" rx="12" class="felles"/>
+    <text x="530" y="376" class="gruppe">GRUPPE 9A + 9B</text>
+    <text x="530" y="402" class="navn">Møteområdet</text>
+  </g>
+
+  <!-- Østkuben - gruppe 6 -->
+  <g id="gruppe-6">
+    <rect x="824" y="370" width="192" height="210" rx="12" class="bygg"/>
+    <text x="840" y="396" class="gruppe">GRUPPE 6</text>
+    <text x="840" y="422" class="navn">Østkuben</text>
+  </g>
+
+  <!-- Tegnforklaring -->
+  <g transform="translate(624, 20)">
+    <rect x="0" y="0" width="14" height="14" rx="4" class="bygg"/>
+    <text x="20" y="11" class="rom">Kontorsone</text>
+    <rect x="100" y="0" width="14" height="14" rx="4" class="felles"/>
+    <text x="120" y="11" class="rom">Fellesareal</text>
+    <rect x="200" y="0" width="14" height="14" rx="4" class="teknisk"/>
+    <text x="220" y="11" class="rom">Teknisk rom</text>
+    <rect x="310" y="0" width="14" height="14" rx="4" class="utenfor"/>
+    <text x="330" y="11" class="rom">Utenfor sonene</text>
+  </g>
+</svg>
