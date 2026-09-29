@@ -51,10 +51,10 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
   container; splitting i flere repoer vurderes i hver handover.
 - **Sikkerhetsstrategi for agent-skriving** til fysisk anlegg (trygt bånd
   vs. norm «bestilling»): Jørn har strategier på gang — kommer.
-- **9 eller 10 soner?** Jørn sa opprinnelig 10 undersystemer med hver sin
-  REGIN; display-brukeranvisningen sier 9 soner, og gruppetabellen fra Jørn
-  (2026-09-29, `dok/omrader-og-grupper.md`) har 9 unike grupper (1–9).
-  Avklares: er det 9 eller 10 REGIN-regulatorer?
+- ~~9 eller 10 soner?~~ **Avklart 2026-09-29:** 10 REGIN-regulatorer i
+  drift (gruppe 1–8 + 9a + 9b); NILAN ser 9 avtrekkssoner (1–9). I tillegg
+  finnes en løs test-REGIN («gruppe 10») for kommunikasjonstesting.
+  Se `dok/omrader-og-grupper.md`.
 - **Sonenavn:** gruppenummer ↔ områdenavn er på plass i
-  `dok/omrader-og-grupper.md`; kobling gruppe ↔ REGIN-regulator gjenstår.
+  `dok/omrader-og-grupper.md`.
 - **Modbus-registerkart for CTS602:** protokolldokument må skaffes fra Nilan.
