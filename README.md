@@ -15,6 +15,10 @@ internt (Tailscale / lokalt nett «Kode15»).
 
 ## Struktur
 
+Felles dokumentasjon ligger i `dok/`: plantegning og **kryssreferansen
+områdenavn ↔ gruppenummer ↔ byggfasenavn** (`dok/omrader-og-grupper.md`) som
+er nøkkelen til all byggefase-dokumentasjon.
+
 Repoet er delt i ett overordnet UI og tre fysiske integrasjonslag:
 
 - `kode-klima/` — overordnet web-UI for brukerne (KODE15-profil,
