@@ -31,8 +31,24 @@ Styringslogikken passer dårlig for våre forhold og sløser energi:
 2. **Agentstyring direkte over Modbus** — fysisk forbindelse fra raven til
    CTS 602i, med trygge grenser for skriving.
 
+## Fysisk forbindelse — valgt kandidat (Jørn, 2026-09-29)
+
+**Elfin EW11A-0** (Hi-Flying): RS485-til-WiFi seriellserver med innebygd
+Modbus TCP ↔ RTU-oversetting. Verifisert av Jørn mot NILAN-aggregatet.
+
+- Størrelse 61 × 26 × 17,8 mm (20 g) — får plass i Ø70 veggboks, og er
+  dermed også kandidat for REGIN-sonene (se `../regin/`)
+- Forsyning 5–36 VDC (A-varianten), ~200 mA / < 700 mW
+- WiFi 802.11 b/g/n (2,4 GHz), STA/AP, WPA2, TLS 1.2; «-0» = ekstern antenne
+- RS485 via RJ45: pinne 5 = A+, pinne 6 = B−; baud 300–230 400
+- Konfigureres via innebygd webside eller IOTService
+
+Oppsett mot CTS 602i: A+/B− til aggregatets Modbus-klemmer, seriell
+19 200 baud / 8 databiter / even parity / 1 stoppbit, Modbus TCP-modus.
+raven når aggregatet som Modbus TCP-klient over nettet (slaveadresse 30).
+
 Avklares:
 
-- Fysisk vei: USB-til-RS485-adapter, Modbus TCP-gateway eller annet
-- Registerkart for CTS602 (Modbus-protokolldokument fra Nilan)
+- Registerkart-detaljer: protokolldokument ligger i
+  `dok/cts602-hmi350t-modbus-protokoll-v20-en.pdf`
 - Trygge grenser for agent-skriving

@@ -12,6 +12,9 @@ før noe monteres i driftssatte soner.
 
 Avklares:
 
-- ESP32-design: fastvare, grensesnitt mot REGIN-regulatoren, API mot backend
+- Fjernstyringsdesign per sone: ESP32 eller **Elfin EW11A-0** (kandidaten
+  valgt for NILAN, se `../nilan/README.md`) — den får plass i Ø70 veggboks,
+  som er kravet per sone
+- Grensesnitt mot REGIN-regulatoren og API mot backend
 
 Status: ikke påbegynt.
