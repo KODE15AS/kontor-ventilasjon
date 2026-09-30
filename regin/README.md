@@ -31,6 +31,13 @@ Test-REGIN gruppe 10, koblet til raven via USB-RS485-adapteren
   viftetrinn stemte
 - Verktøy: Python `pymodbus` (skann og lesing tok sekunder — Regio Tool
   trengs ikke)
+- **Skrivetest OK samme dag:** grunnsettpunkt (holding-register 284,
+  faktor 10) skrevet +1 °C og tilbake, aktivt settpunkt fulgte med.
+  Full lese/skrive-sløyfe bevist — alt REGIN kan konfigureres til er
+  tilgjengelig over Modbus (manualen kap. 16–17), inkl. driftsmodus,
+  viftestyring, regulatorparametre og sperring av lokale knapper.
+  KODE-klima kan dermed være master med REGIN som utførende slave;
+  lokal regulering fortsetter på siste settpunkt om nettet faller ut.
 
 **Kabeltopologi (bekreftet av Jørn 2026-09-30):** Cat-kablene er IKKE
 terminert som felles buss. De går som signalkabler i stjerne, fra hver

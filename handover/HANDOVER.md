@@ -44,6 +44,8 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 - [x] **Første Modbus-kontakt 2026-09-30:** test-REGIN (gruppe 10) lest
       via USB-RS485 på raven — adresse 247, 9600 8E1, pymodbus.
       Se `regin/README.md`
+- [x] **Skrivetest 2026-09-30:** settpunkt endret og tilbakestilt over
+      Modbus — full styringssløyfe bevist, KODE-klima kan være master
 - [ ] Endelig gateway-valg og plassering per sone
 - [ ] Modbus-adresser (ELA) kartlagt per sone (driftssatte soner antatt
       adresse 30 per konfigmalen — må verifiseres)
