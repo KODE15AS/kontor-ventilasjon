@@ -79,8 +79,12 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
       og uavhengig veksling mellom to settpunkt per PRH
       (nattsenk-inngangene) — fire kombinasjoner å eksperimentere med,
       pluss femte tilstand: primærvifter helt av, sekundærkretsen
-      tvangskjører (evt. med reverserte sonevifter). Ingen overtakelse
-      av PID-sløyfa. Gjenstår: velge I/O-modul, bygge, montere
+      tvangskjører (evt. med reverserte sonevifter). I tillegg
+      **trinnvis modulering av dag-settpunktet** ved å emulere
+      NTC-uteføleren (temperaturkompensering) med relé-styrt
+      motstandsstige — 16 dp-trinn per manifold. Ingen overtakelse
+      av PID-sløyfa. Gjenstår: velge I/O-modul (nå med nok reléer:
+      2 til nattsenk + 2×4 til motstandsstiger), bygge, montere
 
 ## Åpne spørsmål (vurderes per handover)
 

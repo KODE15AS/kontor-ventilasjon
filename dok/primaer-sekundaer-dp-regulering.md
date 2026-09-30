@@ -50,6 +50,14 @@ raven:
   PRH-enes nattsenk-innganger (potensialfri kontakt, laget for ekstern
   styring): dag-settpunkt (80 Pa) og natt-settpunkt (stilles én gang
   manuelt på PRH)
+- **Trinnvis modulering av dag-settpunktet** via PRH-ens
+  temperaturkompensering (oppdaget 2026-09-30): PRH justerer
+  dag-settpunktet etter en NTC-uteføler (ETF-serien), med
+  konfigurerbart maks (vindu 0/+30 °C) og min (−20/0 °C) — f.eks.
+  −25 Pa over båndet. Agenten **emulerer føleren med en motstandsstige
+  koblet via reléer** på I/O-modulen: 4 reléer i binær stige gir 16
+  «utetemperaturer» = 16 dp-trinn innenfor kompensasjonsbåndet. PRH
+  aner ingenting — reguleringen er urørt.
 
 Maskinvarelinje: **Elfin EW11A-0** (samme gateway-type som ellers i
 anlegget — erstatter tidligere ESP32-tanke). Elfin er en transparent
@@ -59,7 +67,9 @@ Elfin-en.
 
 ### Eksperimentrommet: fire + én tilstander
 
-De to uavhengige vekslerne gir **fire settpunkt-kombinasjoner** å
+Med føler-emuleringen blir styringsrommet per manifold: **16 trinn på
+dag-settpunktet + nattsenk-nivået + av-tilstanden**. Grunnmatrisen med
+de to uavhengige nattsenk-vekslerne gir **fire kombinasjoner** å
 eksperimentere med for energi- og miljøoptimalisering:
 
 | | Tilluft dag (+80) | Tilluft natt (lav) |
