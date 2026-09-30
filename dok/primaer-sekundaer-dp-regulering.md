@@ -34,9 +34,22 @@ differansetrykk. Foto med nummererte punkter:
 
 ## Viktig for styring og energioptimalisering
 
-- **dp-settpunktene stilles manuelt** på de to PRH-regulatorene — de er
-  i dag ikke fjernstyrbare. dp er dermed den sentrale
-  koblingsparameteren mellom kretsene: lavere dp = mindre vifteenergi i
-  primærkretsen, men mindre tilgjengelig trykk for sonene.
-- Dokumentasjon for PRH (regulator) og PTH (transmitter) kommer —
-  arkiveres her i `dok/`.
+dp er den sentrale koblingsparameteren mellom kretsene: lavere dp =
+mindre vifteenergi i primærkretsen, men mindre tilgjengelig trykk for
+sonene. PRH-ene betjenes manuelt i dag, men produktdokumentasjonen
+(`../nilan/dok/`) viser tre veier til agent-tilgang, i økende grad av
+inngrep:
+
+1. **Lese dp (uinvasivt):** PRH har BMS-utgang 4–20 mA med målt trykk.
+   En ekstern ADC (f.eks. ESP32) gir agenten kontinuerlig dp-overvåking
+   av begge manifolder uten å røre reguleringen. Alarmreléet kan
+   overvåkes samtidig.
+2. **To dp-nivåer (lavinvasivt — anbefalt første trekk):**
+   PRH har **nattsenk-inngang** laget for ekstern tidsstyring
+   (potensialfri kontakt). Et agent-styrt relé per PRH gir to nivåer:
+   dag-settpunkt (80 Pa) og natt-settpunkt (f.eks. 40–50 Pa, stilles
+   én gang manuelt). Reguleringen bor fortsatt trygt i PRH.
+3. **Full kontinuerlig dp-styring (mest invasivt — senere ved behov):**
+   egen regulator (f.eks. ESP32 med ADC/DAC) overtar sløyfa: leser PTH
+   0–10 V, kjører PID i programvare, driver viftesignalet 0–10 V.
+   PRH beholdes som fallback via omkoblingsrelé.

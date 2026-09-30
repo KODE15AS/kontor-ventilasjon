@@ -73,8 +73,10 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 - [x] PRH- og PTH-dokumentasjon arkivert 2026-09-30 (OJ Electronics,
       datablad + manualer i `dok/`); NILAN VPM-produktdata og elektrisk
       FDV for VPR560 i `nilan/dok/`
-- [ ] dp-settpunktene er manuelle i dag — vurdere fjernavlesning/
-      -styring for energioptimalisering
+- [ ] dp-fjernstyring: tre veier identifisert 2026-09-30 (les 4–20 mA;
+      to nivåer via PRH nattsenk-inngang + relé — anbefalt først; full
+      overtakelse av sløyfa) — se `dok/primaer-sekundaer-dp-regulering.md`.
+      Gjenstår: velge og bygge
 
 ## Åpne spørsmål (vurderes per handover)
 

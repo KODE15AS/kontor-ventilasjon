@@ -18,10 +18,9 @@ dokumenter ligger i `nilan/dok/` og `regin/dok/`.
 |---|---|
 | `primaer-sekundaer-dp-regulering.md` | **Krysningspunktet NILAN ↔ REGIN:** primær-/sekundærkrets og dp-regulering av manifoldene (±80 Pa, PRH/PTH) |
 | `2026-09-30-primaer-sekundaer-dp-oversikt.jpg` | Foto av ventilasjonsrommet med nummererte punkter (aggregat, manifolder, PRH, P1/P2, målepunkter) |
-| `prh-trykkregulator-datablad-en.pdf` | **OJ Electronics PRH** konstanttrykkregulator — datablad (styrer vifter med 0–10 V-signal) |
-| `prh-trykkregulator-manual-57407a.pdf` | PRH instruksjoner 57407A (08/12, da/en m.fl.) — leveres som par med PTH-transduser |
-| `pth-3202-dr-manual-67546g-en.pdf` | **OJ PTH-3202-DR** trykktransmitter — instruksjoner 67546G (04/21, en/de/fr) med menyskjema og plasseringskrav |
-| `pth-3202-miljodeklarasjon-oj.pdf` | OJ miljø-/materialdeklarasjon PTH-3202/3502 (2022) |
+
+PRH-/PTH-produktdokumentasjonen ligger i `../nilan/dok/` — trykkholdingen
+er en del av NILAN-systemet (primærkretsen).
 
 ## Testutstyr
 
