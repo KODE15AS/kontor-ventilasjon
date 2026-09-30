@@ -36,20 +36,44 @@ differansetrykk. Foto med nummererte punkter:
 
 dp er den sentrale koblingsparameteren mellom kretsene: lavere dp =
 mindre vifteenergi i primærkretsen, men mindre tilgjengelig trykk for
-sonene. PRH-ene betjenes manuelt i dag, men produktdokumentasjonen
-(`../nilan/dok/`) viser tre veier til agent-tilgang, i økende grad av
-inngrep:
+sonene.
 
-1. **Lese dp (uinvasivt):** PRH har BMS-utgang 4–20 mA med målt trykk.
-   En ekstern ADC (f.eks. ESP32) gir agenten kontinuerlig dp-overvåking
-   av begge manifolder uten å røre reguleringen. Alarmreléet kan
-   overvåkes samtidig.
-2. **To dp-nivåer (lavinvasivt — anbefalt første trekk):**
-   PRH har **nattsenk-inngang** laget for ekstern tidsstyring
-   (potensialfri kontakt). Et agent-styrt relé per PRH gir to nivåer:
-   dag-settpunkt (80 Pa) og natt-settpunkt (f.eks. 40–50 Pa, stilles
-   én gang manuelt). Reguleringen bor fortsatt trygt i PRH.
-3. **Full kontinuerlig dp-styring (mest invasivt — senere ved behov):**
-   egen regulator (f.eks. ESP32 med ADC/DAC) overtar sløyfa: leser PTH
-   0–10 V, kjører PID i programvare, driver viftesignalet 0–10 V.
-   PRH beholdes som fallback via omkoblingsrelé.
+## Valgt plan (2026-09-30): dp-kontrolleren
+
+Vi bygger en **liten kontroller ved aggregatet** som gir agenten på
+raven:
+
+- **dp TILLUFT og dp FRALUFT** kontinuerlig, lest fra PRH-enes
+  BMS-utganger (4–20 mA med målt trykk) — uinvasivt, reguleringen
+  røres ikke
+- **Veksling mellom to settpunkt per PRH, uavhengig av hverandre**, via
+  PRH-enes nattsenk-innganger (potensialfri kontakt, laget for ekstern
+  styring): dag-settpunkt (80 Pa) og natt-settpunkt (stilles én gang
+  manuelt på PRH)
+
+Maskinvarelinje: **Elfin EW11A-0** (samme gateway-type som ellers i
+anlegget — erstatter tidligere ESP32-tanke). Elfin er en transparent
+RS485↔WiFi-gateway uten egen I/O, så kontrolleren realiseres med en
+**Modbus RTU I/O-modul** (2× analog inngang 4–20 mA + 2× relé) bak
+Elfin-en.
+
+### Eksperimentrommet: fire + én tilstander
+
+De to uavhengige vekslerne gir **fire settpunkt-kombinasjoner** å
+eksperimentere med for energi- og miljøoptimalisering:
+
+| | Tilluft dag (+80) | Tilluft natt (lav) |
+|---|---|---|
+| **Fraluft dag (−80)** | normal drift | eksperiment |
+| **Fraluft natt (lav)** | eksperiment | lavlast |
+
+I tillegg finnes en **femte tilstand: primærviftene stoppes helt** og
+alt tvangskjøres av sekundærkretsen alene. Primærkretsen har ikke
+absolutte stengespjeld, så sonene kan trekke luft gjennom det avslåtte
+aggregatet. Her kan det også eksperimenteres med **reversering av én
+eller flere sonevifter** (Salda), slik at enkelte soner fungerer som
+avtrekk for de andre.
+
+Ingen ambisjon per nå om å overta selve PID-sløyfa (full kontinuerlig
+dp-styring) — PRH beholder reguleringen; feiler kontrolleren, faller
+anlegget tilbake til dag-settpunktene.

@@ -73,10 +73,14 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 - [x] PRH- og PTH-dokumentasjon arkivert 2026-09-30 (OJ Electronics,
       datablad + manualer i `dok/`); NILAN VPM-produktdata og elektrisk
       FDV for VPR560 i `nilan/dok/`
-- [ ] dp-fjernstyring: tre veier identifisert 2026-09-30 (les 4–20 mA;
-      to nivåer via PRH nattsenk-inngang + relé — anbefalt først; full
-      overtakelse av sløyfa) — se `dok/primaer-sekundaer-dp-regulering.md`.
-      Gjenstår: velge og bygge
+- [ ] **dp-kontrolleren** (plan valgt 2026-09-30, se
+      `dok/primaer-sekundaer-dp-regulering.md`): Modbus RTU I/O-modul
+      bak Elfin EW11A-0 gir agenten dp TILLUFT + dp FRALUFT (4–20 mA)
+      og uavhengig veksling mellom to settpunkt per PRH
+      (nattsenk-inngangene) — fire kombinasjoner å eksperimentere med,
+      pluss femte tilstand: primærvifter helt av, sekundærkretsen
+      tvangskjører (evt. med reverserte sonevifter). Ingen overtakelse
+      av PID-sløyfa. Gjenstår: velge I/O-modul, bygge, montere
 
 ## Åpne spørsmål (vurderes per handover)
 

@@ -51,10 +51,22 @@ styringssløyfen er bevist** (se `regin/README.md`):
 - Lokale skivejusteringer synlige umiddelbart over Modbus —
   KODE-klima kan være master med REGIN som utførende slave
 
+## Sent i chat 0 også: krysningspunkt og dp-plan
+
+Primær-/sekundærkrets og dp-reguleringen (±80 Pa, PRH/PTH) er
+dokumentert i `dok/primaer-sekundaer-dp-regulering.md`, med **valgt
+plan for dp-kontrolleren**: Modbus RTU I/O-modul bak Elfin EW11A-0 som
+leser dp for begge manifolder (4–20 mA) og veksler settpunkt per PRH
+uavhengig (nattsenk-inngangene) — fire kombinasjoner + femte tilstand
+(primærvifter av, sekundærkrets tvangskjører). PRH-/PTH-dokumentasjon i
+`nilan/dok/`.
+
 ## Neste steg (chat 1)
 
 1. Elfin EW11A-0 ankommer: konfigurere (WiFi «Kode15», Modbus TCP↔RTU)
    og gjenta testen over WiFi mot test-REGIN.
+1b. Velge Modbus RTU I/O-modul til dp-kontrolleren (2× 4–20 mA inn,
+   2× relé ut) — bestilles gjerne sammen med/etter Elfin-testen.
 2. Deretter test mot **NILAN CTS 602i** (19200 8E1, slave 30) — lese
    status/temperaturer før noe skrives.
 3. Med fungerende kommunikasjon: Dockerfile og container i drift på
