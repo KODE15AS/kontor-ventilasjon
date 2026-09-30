@@ -27,8 +27,9 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 - [x] NILAN-modell og styringsenhet identifisert: VPR 560 med CTS 602i
       (Modbus RTU) — se `nilan/README.md` og `nilan/dok/`
 - [ ] Fysisk Modbus-forbindelse raven ↔ NILAN etablert
-      (kandidat valgt 2026-09-29: Elfin EW11A-0 RS485-til-WiFi,
-      se `nilan/README.md` — gjenstår: innkjøp, montering, konfigurasjon)
+      (Elfin EW11A-0 valgt 2026-09-29; **innkjøp av 2 stk. pågår
+      2026-09-30** for test mot NILAN og test-REGIN — gjenstår:
+      montering, konfigurasjon)
 - [ ] Operatørstøtte for brukere
 - [ ] Agentstyring over Modbus med trygge grenser
 
