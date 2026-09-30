@@ -36,12 +36,25 @@ avkryssede punkter). De viktigste avklaringene fra chat 0:
   2023, se `dok/README.md`). FTDI-basert — plugges rett i raven som
   `/dev/ttyUSB0`. Kan brukes til REGIN-test før Elfin-ene ankommer.
 
+## ✅ Gjennombrudd sent i chat 0 (2026-09-30)
+
+Test-REGIN gruppe 10 ble koblet til raven med USB-adapteren, og **hele
+styringssløyfen er bevist** (se `regin/README.md`):
+
+- Funnet med adresseskann: **adresse 247** (ikke 30!), 9600 8E1
+- Lest live: romtemp, modus, viftetrinn, pådrag — verifisert mot display
+- Skrevet: grunnsettpunkt (HR 284) og settpunkt-offset (HR 76), begge
+  verifisert mot display og tilbakestilt (enheten står nøytralt:
+  grunnsettpunkt 22,0, offset 0,0)
+- Lært: display viser romtemp i hvile, settpunkt under justering;
+  regulatoren har 2 °C dødbånd (varmesettpunkt = settpunkt − 1,0)
+- Lokale skivejusteringer synlige umiddelbart over Modbus —
+  KODE-klima kan være master med REGIN som utførende slave
+
 ## Neste steg (chat 1)
 
-1. Teste mot **test-REGIN gruppe 10** — først gjerne med USB-adapteren
-   direkte på raven, siden med Elfin: lese/skrive registre
-   (adresse 30, registerlister i manualen kap. 16–17).
-   Elfin-konfig: WiFi «Kode15», Modbus TCP↔RTU.
+1. Elfin EW11A-0 ankommer: konfigurere (WiFi «Kode15», Modbus TCP↔RTU)
+   og gjenta testen over WiFi mot test-REGIN.
 2. Deretter test mot **NILAN CTS 602i** (19200 8E1, slave 30) — lese
    status/temperaturer før noe skrives.
 3. Med fungerende kommunikasjon: Dockerfile og container i drift på
