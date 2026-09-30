@@ -63,6 +63,17 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 - [ ] Værvarsel fra yr.no-API som beslutningsgrunnlag (eks.: utsett kjøling
       når kvelden blir kald nok til gratis nedkjøling)
 
+### Systemarkitektur
+
+- [x] **Krysningspunkt NILAN ↔ REGIN avklart 2026-09-30:** primærkrets
+      (NILAN) holder manifoldene på konstant dp (+80/−80 Pa, PRH-
+      regulatorer med P1/P2-transmittere); sekundærkrets (REGIN-sonene)
+      trekker fritt fra manifoldene. Se
+      `dok/primaer-sekundaer-dp-regulering.md`
+- [ ] PRH- og PTH-dokumentasjon arkiveres (Jørn laster opp)
+- [ ] dp-settpunktene er manuelle i dag — vurdere fjernavlesning/
+      -styring for energioptimalisering
+
 ## Åpne spørsmål (vurderes per handover)
 
 - **Container-deling (norm «container»):** starter som ett repo / én

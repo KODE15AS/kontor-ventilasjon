@@ -12,6 +12,13 @@ dokumenter ligger i `nilan/dok/` og `regin/dok/`.
 | `2026-09-29-kontor-layout-1etg.jpg` | Jørns skisse med sonemarkeringer |
 | `omrader-og-grupper.md` | Kryssreferanse sone ↔ gruppe ↔ byggefase-navn |
 
+## Systemarkitektur
+
+| Fil | Innhold |
+|---|---|
+| `primaer-sekundaer-dp-regulering.md` | **Krysningspunktet NILAN ↔ REGIN:** primær-/sekundærkrets og dp-regulering av manifoldene (±80 Pa, PRH/PTH) |
+| `2026-09-30-primaer-sekundaer-dp-oversikt.jpg` | Foto av ventilasjonsrommet med nummererte punkter (aggregat, manifolder, PRH, P1/P2, målepunkter) |
+
 ## Testutstyr
 
 | Fil | Innhold |
