@@ -70,7 +70,9 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
       regulatorer med P1/P2-transmittere); sekundærkrets (REGIN-sonene)
       trekker fritt fra manifoldene. Se
       `dok/primaer-sekundaer-dp-regulering.md`
-- [ ] PRH- og PTH-dokumentasjon arkiveres (Jørn laster opp)
+- [x] PRH- og PTH-dokumentasjon arkivert 2026-09-30 (OJ Electronics,
+      datablad + manualer i `dok/`); NILAN VPM-produktdata og elektrisk
+      FDV for VPR560 i `nilan/dok/`
 - [ ] dp-settpunktene er manuelle i dag — vurdere fjernavlesning/
       -styring for energioptimalisering
 
