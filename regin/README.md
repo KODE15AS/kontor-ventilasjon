@@ -1,20 +1,27 @@
 # regin — 10 undersystemer
 
 Anlegget er delt i **10 distinkte undersystemer** («soner»): gruppe 1–8 pluss
-9a og 9b, hver styrt av én **REGIN 230 CTD EC**. Kobling gruppe ↔ områdenavn:
-se `../dok/omrader-og-grupper.md`. Regulatorene har ikke egen fjernstyring;
-hver får montert en **ESP32** som gjør sonen fjernstyrbar over WiFi (lokalt
-nett «Kode15»). Brukerne styrer sonene fra KODE-klima (`kode-klima/`).
+9a og 9b, hver styrt av én **Regin RCF-230CTD-EC** (kommuniserende
+romregulator for fancoil). Kobling gruppe ↔ områdenavn: se
+`../dok/omrader-og-grupper.md`. Brukerne skal styre sonene fra KODE-klima
+(`kode-klima/`).
 
-I tillegg finnes en **løs test-REGIN («gruppe 10»)** som testinstrument for
-validering av kommunikasjon — den er naturlig førstemål for ESP32-utviklingen
-før noe monteres i driftssatte soner.
+## Datatilkobling (avklart 2026-09-30)
+
+Regulatorene har **innebygd RS485 med Modbus RTU slave** («C» i
+modellnavnet = communicating), og RS485-bussen er **allerede kablet** i
+sonene: A = blå, B = sort på Cat-kabel, se koblingsskjema
+`dok/54740T390-2-regin-gruppekontroller.pdf` (2019). Registerlister,
+adressering og alle nøkkelfakta: `dok/README.md`. Anleggets
+Regio-konfigurasjon fra 2023 ligger i `konfig/`.
+
+I tillegg finnes en **løs test-REGIN («gruppe 10»)** som testinstrument —
+naturlig førstemål for kommunikasjonstesting før driftssatte soner røres.
 
 Avklares:
 
-- Fjernstyringsdesign per sone: ESP32 eller **Elfin EW11A-0** (kandidaten
-  valgt for NILAN, se `../nilan/README.md`) — den får plass i Ø70 veggboks,
-  som er kravet per sone
-- Grensesnitt mot REGIN-regulatoren og API mot backend
-
-Status: ikke påbegynt.
+- Gateway-design: én felles RS485-buss til raven via én gateway
+  (f.eks. Elfin EW11A-0, se `../nilan/README.md`), eller én Elfin per
+  sone i Ø70 veggboks — avhenger av hvordan Cat-kablene er terminert
+- Modbus-adresser (ELA) per sone — leses ut/settes med Regio tool
+- API mot backend og kobling til KODE-klima

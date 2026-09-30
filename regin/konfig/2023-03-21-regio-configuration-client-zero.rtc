@@ -1,0 +1,160 @@
+[General]
+Type = "RegioTool"
+Pla = " 2"
+Ela = " 161"
+VerMajor = "1"
+VerMinor = "4"
+VerBranch = "0"
+VerNumber = "0"
+RegioHardware = "1731"
+
+[Note]
+NoteText = ""
+
+[ControllerSet]
+
+[Controller_ROOM]
+RegioRCFSetPoint = " 22"
+RegioUnOccSetPHeat = " 15"
+RegioUnOccSetPCool = " 30"
+RegioComfortSetPDeadBand = " 2"
+RegioSetPOffset = " 0"
+RegioTermostatHyst = " 1"
+RegioPIDPGain = " 10"
+RegioPIDITime = " 300"
+
+[Timegroup0]
+Dayplan0.Period0 = " 0 -  0"
+Dayplan0.Period1 = " 0 -  0"
+Dayplan1.Period0 = " 0 -  0"
+Dayplan1.Period1 = " 0 -  0"
+Dayplan2.Period0 = " 0 -  0"
+Dayplan2.Period1 = " 0 -  0"
+Dayplan3.Period0 = " 0 -  0"
+Dayplan3.Period1 = " 0 -  0"
+Dayplan4.Period0 = " 0 -  0"
+Dayplan4.Period1 = " 0 -  0"
+Dayplan5.Period0 = " 0 -  0"
+Dayplan5.Period1 = " 0 -  0"
+Dayplan6.Period0 = " 0 -  0"
+Dayplan6.Period1 = " 0 -  0"
+Dayplan7.Period0 = " 0 -  0"
+Dayplan7.Period1 = " 0 -  0"
+
+[Timegroup1]
+Dayplan0.Period0 = " 0 -  0"
+Dayplan0.Period1 = " 0 -  0"
+Dayplan1.Period0 = " 0 -  0"
+Dayplan1.Period1 = " 0 -  0"
+Dayplan2.Period0 = " 0 -  0"
+Dayplan2.Period1 = " 0 -  0"
+Dayplan3.Period0 = " 0 -  0"
+Dayplan3.Period1 = " 0 -  0"
+Dayplan4.Period0 = " 0 -  0"
+Dayplan4.Period1 = " 0 -  0"
+Dayplan5.Period0 = " 0 -  0"
+Dayplan5.Period1 = " 0 -  0"
+Dayplan6.Period0 = " 0 -  0"
+Dayplan6.Period1 = " 0 -  0"
+Dayplan7.Period0 = " 0 -  0"
+Dayplan7.Period1 = " 0 -  0"
+
+[Timegroup2]
+Dayplan0.Period0 = " 0 -  0"
+Dayplan0.Period1 = " 0 -  0"
+Dayplan1.Period0 = " 0 -  0"
+Dayplan1.Period1 = " 0 -  0"
+Dayplan2.Period0 = " 0 -  0"
+Dayplan2.Period1 = " 0 -  0"
+Dayplan3.Period0 = " 0 -  0"
+Dayplan3.Period1 = " 0 -  0"
+Dayplan4.Period0 = " 0 -  0"
+Dayplan4.Period1 = " 0 -  0"
+Dayplan5.Period0 = " 0 -  0"
+Dayplan5.Period1 = " 0 -  0"
+Dayplan6.Period0 = " 0 -  0"
+Dayplan6.Period1 = " 0 -  0"
+Dayplan7.Period0 = " 0 -  0"
+Dayplan7.Period1 = " 0 -  0"
+
+[HolidaySet]
+
+[SysCfg]
+RegioModbusSlaveAddr = " 30"
+RegioModbusParity = "2"
+RegioComBusSpeed = "0"
+
+[CTRL_CFG]
+RegioControllerMode = "3"
+RegioSetpointOffsetPos = " 13"
+RegioSetpointOffsetNeg = " 17"
+RegioFanControlMode = "3"
+RegioFanSpeedMax = "3"
+RegioFanSpeed1Start = " 20"
+RegioFanSpeed2Start = " 60"
+RegioFanSpeed3Start = " 100"
+RegioFanSpeedHyst = " 5"
+RegioMinFanSpeed = "-1"
+RegioMinECFanSpeed = " 10"
+RegioMaxECFanSpeed = " 100"
+RegioPreventManualFanSpeed = "0"
+
+[IoCfg]
+RegioAi1 = "0"
+RegioAi2 = "5"
+RegioDi1 = "3"
+RegioDi2 = "2"
+RegioDi3 = "0"
+RegioUi1 = "0"
+RegioUO1 = "17"
+RegioUO2 = "4"
+RegioDo1 = "0"
+RegioDo2 = "0"
+RegioDo3 = "0"
+RegioDo4 = "0"
+RegioDo5 = "0"
+RegioDo6 = "0"
+RegioDo7 = "0"
+RegioDi1NC = "0"
+RegioDi2NC = "0"
+RegioUDi1NC = "0"
+
+[VALVE_CFG]
+RegioThermoFunc = "0"
+RegioCVHeatType = "0"
+RegioCVCoolType = "0"
+RegioCVHeatRunTime = " 120"
+RegioCVCoolRunTime = " 120"
+RegioCVDeadband = " 2"
+RegioCVHeatPeriodTime = " 60"
+RegioCVCoolPeriodTime = " 60"
+RegioDo4NC = "-1"
+RegioDo5NC = "-1"
+RegioCVHeatExerciseInterval = " 23"
+RegioCVCoolExerciseInterval = " 23"
+
+[AiCfg]
+RegioInternalTempComp = " 0"
+RegioAi1Comp = " 0"
+RegioTempFilterFactor = " .2"
+
+[MISC_CFG]
+RegioRemoteState = "5"
+RegioPresenceOnTime = " 0"
+RegioPresenceOffTime = " 0"
+RegioChangeOverSelect = "2"
+RegioAIChangeOverLimitLow = " 16"
+RegioAIChangeOverLimitHigh = " 28"
+RegioDisplayViewMode = "2"
+RegioDispBacklightLO = " 10"
+RegioDispBacklightHI = " 30"
+RegioButtonActivationConf = "7"
+RegioBlockConfig = "0"
+RegioMouldProt = "0"
+RegioDi1Act = "0"
+
+[AlarmSet]
+
+[TcpCfg]
+TcpEnabled = "No"
+

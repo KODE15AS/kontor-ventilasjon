@@ -31,8 +31,11 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 
 ### regin (10 soner)
 
-- [ ] Navneliste for de 10 sonene
-- [ ] ESP32 montert per sone, fjernstyring over WiFi «Kode15»
+- [x] Regulator identifisert: Regin RCF-230CTD-EC med innebygd Modbus RTU
+      over RS485 — bussen er alt kablet (skjema 54740T390-2), se
+      `regin/dok/`
+- [ ] Gateway-design valgt (felles buss eller Elfin EW11A-0 per sone)
+- [ ] Modbus-adresser (ELA) kartlagt per sone
 - [ ] Soner styrbare fra KODE-klima
 
 ### smarthus
