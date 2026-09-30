@@ -44,6 +44,28 @@ Levert av Dantherm AS, 10 stk. av hver (én per sone):
 | `54740T390-3-dorstolpe-arrangement.pdf` | Dørstolpe-arrangement (J. Watvedt, 2019) |
 | `2021-05-31-dantherm-ordrebekreftelse-sonepakke.pdf` | Ordrebekreftelse Dantherm AS (ordre 131079): **eksakte modeller for sonepakken**, 10 stk. av hver — se «Komponenter per sone» |
 
+## Regio Tool og anleggets konfigurasjon
+
+Regin-installeren «Regio Tool 1.6-1-03 Setup.exe» (2018, InstallShield,
+71 MB) ligger i Jørns Dropbox («Förprogrammerade rumsregulatorer med
+kommunikation.zip») — bevisst **ikke** committet hit pga. størrelse.
+Verktøyet er Windows-only og krever Regins RS485-kabel; på raven er det
+uaktuelt.
+
+Det trengs heller ikke: konfigurasjonsfila `../konfig/
+2023-03-21-regio-configuration-client-zero.rtc` er **ren INI-tekst** som
+kan leses og endres direkte, og alt Regio Tool konfigurerer er også
+eksponert som Modbus-registre (manualen kap. 16–17). Nøkkelfunn fra
+anleggskonfigurasjonen 2023:
+
+- **Modbus slaveadresse 30**, paritet-kode 2, bussfart-kode 0
+  (enum-verdier — mapping står i manualen). Med stjernetopologi og én
+  gateway per sone er lik adresse i alle soner uproblematisk.
+- EXOline-adresse PLA:ELA = 2:161 («client zero»-malen)
+- Regulator-modus 3, viftestyring modus 3 (EC 10–100 %),
+  settpunkt 22 °C (komfort), 15/30 °C (ubemannet varme/kjøling)
+- Full I/O-konfigurasjon (AI/DI/UI/UO/DO) står i fila
+
 ## Eliminerte duplikater (ikke tatt inn i repoet)
 
 - «Brsojyre MERE INFO RCF-230CTD-EC.pdf» — eldre revisjon (01/2015) av databladet
