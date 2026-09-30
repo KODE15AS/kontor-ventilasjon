@@ -32,12 +32,16 @@ avkryssede punkter). De viktigste avklaringene fra chat 0:
 
 - Innkjøp av **2 stk. Elfin EW11A-0** (RS485-til-WiFi-gateway) for test
   mot NILAN og mot den løse test-REGIN-en («gruppe 10»).
+- **USB-RS485-adapter finnes allerede:** Sentera CNVT-USB-RS485 (kjøpt
+  2023, se `dok/README.md`). FTDI-basert — plugges rett i raven som
+  `/dev/ttyUSB0`. Kan brukes til REGIN-test før Elfin-ene ankommer.
 
 ## Neste steg (chat 1)
 
-1. Når Elfin-ene ankommer: konfigurere (WiFi «Kode15», Modbus TCP↔RTU)
-   og teste mot **test-REGIN gruppe 10** først — lese/skrive registre
+1. Teste mot **test-REGIN gruppe 10** — først gjerne med USB-adapteren
+   direkte på raven, siden med Elfin: lese/skrive registre
    (adresse 30, registerlister i manualen kap. 16–17).
+   Elfin-konfig: WiFi «Kode15», Modbus TCP↔RTU.
 2. Deretter test mot **NILAN CTS 602i** (19200 8E1, slave 30) — lese
    status/temperaturer før noe skrives.
 3. Med fungerende kommunikasjon: Dockerfile og container i drift på
