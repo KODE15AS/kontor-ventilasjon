@@ -18,6 +18,17 @@ Kilde: Jørns Dropbox, overført 2026-09-30. Regulatoren i sonene er
   `54740T390-2` (J. Watvedt, 2019) viser A = blå og B = sort på Cat-kabel
   til hver lokalkontroller.
 
+## Komponenter per sone (fra Dantherm-ordren 2021-05-31)
+
+Levert av Dantherm AS, 10 stk. av hver (én per sone):
+
+| Varenr. | Komponent |
+|---|---|
+| MR130397 | **Salda RS160EC** kanalvifte, lakkert stål, 1~230 V, 0,9 A, maks 60 °C, **0–10 V styring**, IP54 |
+| MS114003 | **Regin RCF-230CTD-EC** fancoil-regulator, on/off 3-p, RS485, veggmontert |
+| 449 | Kanalføler **PT1000** |
+| GKOEKA012 | **Salda EKA160-2,0** kanalbatteri, ø160 mm, **2,0 kW**, 1×230 V, aluzink |
+
 ## Filer
 
 | Fil | Innhold |
@@ -31,6 +42,7 @@ Kilde: Jørns Dropbox, overført 2026-09-30. Regulatoren i sonene er
 | `54740T390-1-koblingsskjema-varmebatt-og-vifte.pdf` | Koblingsskjema varmebatteri og vifte (J. Watvedt, 2019) |
 | `54740T390-2-regin-gruppekontroller.pdf` | Koblingsskjema REGIN lokalkontroller — **viser RS485 A/B-kabling** (J. Watvedt, 2019) |
 | `54740T390-3-dorstolpe-arrangement.pdf` | Dørstolpe-arrangement (J. Watvedt, 2019) |
+| `2021-05-31-dantherm-ordrebekreftelse-sonepakke.pdf` | Ordrebekreftelse Dantherm AS (ordre 131079): **eksakte modeller for sonepakken**, 10 stk. av hver — se «Komponenter per sone» |
 
 ## Eliminerte duplikater (ikke tatt inn i repoet)
 
