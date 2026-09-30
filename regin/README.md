@@ -9,8 +9,8 @@ romregulator for fancoil). Kobling gruppe ↔ områdenavn: se
 ## Datatilkobling (avklart 2026-09-30)
 
 Regulatorene har **innebygd RS485 med Modbus RTU slave** («C» i
-modellnavnet = communicating), og RS485-bussen er **allerede kablet** i
-sonene: A = blå, B = sort på Cat-kabel, se koblingsskjema
+modellnavnet = communicating), og RS485-parene er alt kablet i sonene:
+A = blå, B = sort på Cat-kabel, se koblingsskjema
 `dok/54740T390-2-regin-gruppekontroller.pdf` (2019). Registerlister,
 adressering og alle nøkkelfakta: `dok/README.md`. Anleggets
 Regio-konfigurasjon fra 2023 ligger i `konfig/`.
@@ -24,6 +24,17 @@ enkelt REGIN til sonens varmebatteri, som fungerer som koblingsboks/-skap
 (relé m.m.). Konsekvens: fjernstyring krever én gateway per sone —
 kandidaten **Elfin EW11A-0** (se `../nilan/README.md`) passer i Ø70
 veggboks ved varmebatteriet.
+
+## Fysisk installasjon (foto 2026-09-28)
+
+Foto av REGIN-terminering, veggboks, manifold med Dantherm-vifter og
+Salda-varmebatterier: se `bilder/README.md`. Merk fra bildene:
+
+- Veggboksen **bak** regulatoren er alt opptatt av et Finder-impulsrelé
+  (13.31.8.230.4300) — eventuell gateway må plasseres ved varmebatteriet,
+  ikke bak REGIN.
+- Varmebatteriets koblingsboks har Wago-klemmer og Finder 97.01-sokkel
+  med relé — der terminerer signalkabelen fra sonens REGIN.
 
 Avklares:
 
