@@ -41,8 +41,12 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
       men stjerne — én signalkabel per REGIN til sonens varmebatteri
       (fungerer som koblingsboks/-skap). Fjernstyring krever gateway per
       sone; arbeidshypotese Elfin EW11A-0 i Ø70 veggboks.
+- [x] **Første Modbus-kontakt 2026-09-30:** test-REGIN (gruppe 10) lest
+      via USB-RS485 på raven — adresse 247, 9600 8E1, pymodbus.
+      Se `regin/README.md`
 - [ ] Endelig gateway-valg og plassering per sone
-- [ ] Modbus-adresser (ELA) kartlagt per sone
+- [ ] Modbus-adresser (ELA) kartlagt per sone (driftssatte soner antatt
+      adresse 30 per konfigmalen — må verifiseres)
 - [ ] Soner styrbare fra KODE-klima
 
 ### smarthus

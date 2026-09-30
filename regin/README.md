@@ -18,6 +18,20 @@ Regio-konfigurasjon fra 2023 ligger i `konfig/`.
 I tillegg finnes en **løs test-REGIN («gruppe 10»)** som testinstrument —
 naturlig førstemål for kommunikasjonstesting før driftssatte soner røres.
 
+## ✅ Første Modbus-kontakt (2026-09-30)
+
+Test-REGIN gruppe 10, koblet til raven via USB-RS485-adapteren
+(Sentera CNVT-USB-RS485, `/dev/ttyUSB0`), svarer på:
+
+- **Adresse 247** (ikke 30 som i konfigmalen — adresseskann 1–247 fant den)
+- **9600 baud, 8 databiter, Even paritet, 1 stoppbit**
+- Programvare RC v1.4.1.0; temperaturer leses med faktor 10
+  (input-register 11 = 216 → 21,6 °C)
+- Verifisert mot displayet: romtemp, komfortmodus, varmepådrag og
+  viftetrinn stemte
+- Verktøy: Python `pymodbus` (skann og lesing tok sekunder — Regio Tool
+  trengs ikke)
+
 **Kabeltopologi (bekreftet av Jørn 2026-09-30):** Cat-kablene er IKKE
 terminert som felles buss. De går som signalkabler i stjerne, fra hver
 enkelt REGIN til sonens varmebatteri, som fungerer som koblingsboks/-skap
