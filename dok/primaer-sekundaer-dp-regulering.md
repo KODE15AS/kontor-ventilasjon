@@ -57,7 +57,13 @@ raven:
   −25 Pa over båndet. Agenten **emulerer føleren med en motstandsstige
   koblet via reléer** på I/O-modulen: 4 reléer i binær stige gir 16
   «utetemperaturer» = 16 dp-trinn innenfor kompensasjonsbåndet. PRH
-  aner ingenting — reguleringen er urørt.
+  aner ingenting — reguleringen er urørt. Bekreftet i databladet
+  2026-09-30: både reduksjonens størrelse og temperaturvinduet er fritt
+  konfigurerbare (maks/min hvor som helst i 10–200 Pa), så båndet kan
+  settes bredt, f.eks. 80 → 30–40 Pa. ETF-kurven trengs ikke engang på
+  forhånd: siden PRH viser gjeldende settpunkt i displayet, kalibreres
+  stigen empirisk — klikk gjennom trinnene og les av settpunktet per
+  trinn (Jørns poeng 2026-09-30).
 
 Maskinvarelinje: **Elfin EW11A-0** (samme gateway-type som ellers i
 anlegget — erstatter tidligere ESP32-tanke). Elfin er en transparent
