@@ -27,8 +27,9 @@ veggboks ved varmebatteriet.
 
 ## Fysisk installasjon (foto 2026-09-28)
 
-Foto av REGIN-terminering, veggboks, manifold med Dantherm-vifter og
-Salda-varmebatterier: se `bilder/README.md`. Merk fra bildene:
+Foto av REGIN-terminering, veggboks og manifold med Salda-vifter og
+Salda-varmebatterier (levert av Dantherm): se `bilder/README.md`.
+Merk fra bildene:
 
 - Veggboksen **bak** regulatoren er alt opptatt av et Finder-impulsrelé
   (13.31.8.230.4300) — eventuell gateway må plasseres ved varmebatteriet,
