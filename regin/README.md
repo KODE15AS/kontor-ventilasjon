@@ -18,10 +18,16 @@ Regio-konfigurasjon fra 2023 ligger i `konfig/`.
 I tillegg finnes en **løs test-REGIN («gruppe 10»)** som testinstrument —
 naturlig førstemål for kommunikasjonstesting før driftssatte soner røres.
 
+**Kabeltopologi (bekreftet av Jørn 2026-09-30):** Cat-kablene er IKKE
+terminert som felles buss. De går som signalkabler i stjerne, fra hver
+enkelt REGIN til sonens varmebatteri, som fungerer som koblingsboks/-skap
+(relé m.m.). Konsekvens: fjernstyring krever én gateway per sone —
+kandidaten **Elfin EW11A-0** (se `../nilan/README.md`) passer i Ø70
+veggboks ved varmebatteriet.
+
 Avklares:
 
-- Gateway-design: én felles RS485-buss til raven via én gateway
-  (f.eks. Elfin EW11A-0, se `../nilan/README.md`), eller én Elfin per
-  sone i Ø70 veggboks — avhenger av hvordan Cat-kablene er terminert
+- Endelig gateway-valg og plassering per sone (Elfin EW11A-0 ved
+  varmebatteriet er arbeidshypotesen)
 - Modbus-adresser (ELA) per sone — leses ut/settes med Regio tool
 - API mot backend og kobling til KODE-klima

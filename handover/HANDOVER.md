@@ -15,6 +15,9 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 ### KODE-klima (web-UI)
 
 - [ ] Web-UI med tittel «KODE-klima», KODE15-profil, 🔒 kun Tailscale
+- [x] Geometri-mal for plantegning: `kode-klima/kontor-mal.svg`, generert
+      eksakt fra CAD-original (DXF) med `kode-klima/verktoy/dxf-til-svg.py`
+      — gjenstår: sonemerker og etiketter oppå malen
 - [ ] Styring av de 10 sonene (regin) fra UI-et
 - [ ] Styring av smarthus-komponenter fra UI-et
 - [ ] Innsyn i hovedanlegget (nilan)
@@ -32,9 +35,12 @@ levert. Når alle punkter er levert, *er* dette prosjektdokumentasjonen.
 ### regin (10 soner)
 
 - [x] Regulator identifisert: Regin RCF-230CTD-EC med innebygd Modbus RTU
-      over RS485 — bussen er alt kablet (skjema 54740T390-2), se
-      `regin/dok/`
-- [ ] Gateway-design valgt (felles buss eller Elfin EW11A-0 per sone)
+      over RS485 (skjema 54740T390-2), se `regin/dok/`
+- [x] Kabeltopologi avklart 2026-09-30: Cat-kablene er IKKE felles buss,
+      men stjerne — én signalkabel per REGIN til sonens varmebatteri
+      (fungerer som koblingsboks/-skap). Fjernstyring krever gateway per
+      sone; arbeidshypotese Elfin EW11A-0 i Ø70 veggboks.
+- [ ] Endelig gateway-valg og plassering per sone
 - [ ] Modbus-adresser (ELA) kartlagt per sone
 - [ ] Soner styrbare fra KODE-klima
 
